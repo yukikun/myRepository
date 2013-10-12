@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>サーブレットで作成したJavaBeansの表示</title>
+</head>
+<body>
+<jsp:useBean id="user" class="sample.web.UserBeans"></jsp:useBean>
+<jsp:setProperty property="username" name="user" value="ユーザ名サンプル"/>
+<jsp:setProperty property="address" name="user" value="東京都大田区"/>
+
+username:<c:out value="${user.username}" /><br/>
+phone:<c:out value="${user.phone}"/> <br/>
+address:<c:out value="${user.address}" /> <br/>
+
+</body>
+</html>
